@@ -32,9 +32,9 @@ $.ajax({
     html += '<tr> <th>Project Title</th> <th>Year Awarded</th> <th>Original Amount</th> <th>Grant Description</th> </tr>'
 
     $(grants).find('Grant').each(function(){
-      title = $(this).attr('ProjectTitle');
-      year = $(this).attr('YearAwarded');
-      amount = $(this).attr('OriginalAmount');
+      title = $(this).find('ProjectTitle');
+      year = $(this).find('YearAwarded');
+      amount = $(this).find('OriginalAmount');
       description = $(this).find('ToSupport').text();
       if(description != 'None'){
         html += '<tr>'
